@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ceci est le titre de la page qu'on retrouve dans l'onglet du navigateur -->
+    <title>Les balises HTML</title>
+  </head>
+  <body>
+
+    <!-- Les commentaires en HTML en une ligne -->
+    <!--
+      Les commentaires 
+      en HTML
+      en plusieurs lignes
+      -->
+    
+    <!-- h${Titre $}*6
+      emmet : 
+      $ -> nombre
+      *4 -> 4 balises identiques
+      {} -> le texte à l'intérieur des balises
+      [] -> les attributs de la balise
+      > -> avec les enfants...
+    -->
+    <!-- Les titres -->
+    <h1 id="titre-1">Titre 1</h1>
+    <h2>Titre 2</h2>
+    <h3>Titre 3</h3>
+    <h4>Titre 4</h4>
+    <h5>Titre 5</h5>
+    <h6>Titre 6</h6>
+
+    <!-- Le texte (paragraphes, strong, em, strike, span) -->
+    <p id="paragraphe-1"><strong>Lorem ipsum dolor</strong> sit amet consectetur, <strike>adipisicing elit</strike>. Dolorum iusto voluptate delectus placeat est a aspernatur <em>nobis at natus cum </em> deleniti mollitia earum, <span style="color: red">cumque maiores</span> error nam iste alias quibusdam!</p>
+
+    <!-- les listes -->
+    <!-- ul>li{liste $}*3 -->
+    <!-- unordored list -->
+    <ul>
+      <li>liste 1</li>
+      <li>liste 2</li>
+      <li>liste 3</li>
+    </ul>
+    
+    <!-- ordored list -->
+    <ol>
+      <li>liste exemple 1</li>
+      <li>liste exemple 2</li>
+      <li>liste exemple 3</li>
+    </ol>
+
+    <!-- listes imbriquées -->
+    <ul>
+      <li>liste 1</li>
+      <li>liste 2</li>
+      <li>
+        Liste 3 avec une sous liste:
+        <ol>
+          <li>sous-niveau 1</li>
+          <li>sous-niveau 2</li>
+          <li>sous-niveau 3</li>
+        </ol>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- les liens HTML -->
+    <p>
+      Je peux faire un <a href="https://www.yes-yes.com" target="_blank">lien vers une autre page</a> depuis n'importe quel texte. On peut soit remplacer la page courante, soit ouvrir un nouvel onglet avec la propriété target="_blank".
+    </p>
+    <p>
+      On peut aussi faire des <a href="#titre-1">liens internes</a> au document.<br />
+      Exemple de <a href="#paragraphe-1">lien vers le paragraphe</a>.
+    </p>
+    <p>
+      <!-- on peut aussi faire des liens relatifs aux autres pages du site courant -->
+      <a href="page2.html">lien vers la page 2</a><br>
+      <a href="../jour-1-html/page3.html">Vers la page 3 qui se trouve dans un autre dossier</a>
+    </p>
+
+    <!-- les images -->
+    <p>
+      <img width="50%" src="img/cavalier_king_charles.jpeg" alt="Un superbe animal de compagnie, un chien trop mignon." />
+    </p>
+  </body>
+</html>
