@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaires en HTML</title>
+</head>
+<body>
+  <h1>Formulaires</h1>
+
+  <!-- formulaire avec form -->
+  <form action="newsletter.php" method="POST">
+    <input 
+      type="email"
+      name="email"
+      id="mail"
+      value="toto@tata.com"
+      id="email" required placeholder="Votre email ici..."
+    />
+    <!-- 
+      - type: détermine le type de donnée du champ
+      - name: indispensable et unique pour récupérer la donnée côté serveur
+      - required sert à rendre le champ obligatoire et vérifie le type de donnée saisi
+      - placeholder : permet de proposer un texte indicatif ou un échantillon type de la donnée à saisir
+      celui-ci disparait dès que l'utilisateur commence à saisir une donnée
+      - value : permet de préremplir le champ avec une valeur
+     -->
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <!-- on peut avoir plusieurs formulaires sur la même page -->
+  <form action="traitement.php" method="POST">
+    <!-- les données ici ne communiquent pas directement avec l'autre formulaire -->
+
+    <!-- le label est un titre pour le champ, il doit :
+      - soit viser (avec for="") le champ auquel il est associé par son "id" -->
+    <p>
+      <input type="text" name="prenom" id="prenom" />
+      <label for="prenom">Votre prénom</label>
+    </p>
+    <!-- 
+      - soit entourer le champ auquel il est associé 
+    -->
+    <p>
+      <label>
+        <input type="text" name="nom" />
+        Votre nom
+      </label>
+    </p>
+    <!-- ICI : une erreur courante à ne pas reproduire !!! : -->
+    <p>
+      <label>erreur de label ici</label>
+      <input type="text" name="errorlabel" />
+    </p>
+    <!-- fin de l'erreur -->
+
+    <h2>Liste des différents champs de formulaires</h2>
+    
+    <p><label>Champ montext: <input type="text" name="montext"></label></p>
+    <p><label>Champ monemail: <input type="email" name="monemail"></label></p>
+    <p><label>Champ pass: <input type="password" name="pass"></label></p>
+    <p><label>Champ tel: <input type="tel" name="tel" ></label></p>
+    <p><label>Champ number: <input type="number" min="0" max="100" step="10" name="number"></label></p>
+    <p><label>Champ date: <input type="date" name="date"></label></p>
+    <p><label>Champ datetime: <input type="datetime-local" name="datetime"></label></p>
+    <p><label>Champ range: <input type="range" name="range"></label></p>
+    <p><label>Champ color: <input type="color" name="color"></label></p>
+    <p><label>Champ file: <input type="file" accept=".pdf, .xls, .xlsx" name="file"></label></p>
+      
+    <h2>Champs input de type radio et checkbox</h2>
+
+    <p>
+      <label>
+        <input type="checkbox" name="accept" value="oui">
+        Acceptez-vous les CGV ?
+      </label>
+    </p>
+
+    <!-- fieldset sert à grouper des champs qui sont en relation -->
+    <fieldset>
+      <legend>Choisissez un genre:</legend>
+      <label>
+        <input type="radio" name="gender" value="male">
+        Homme
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female">
+        Femme
+      </label>
+      <label>
+        <input type="radio" name="gender" value="other">
+        Autre
+      </label>
+    </fieldset>
+    
+    <!-- select: choix menu/multiple -->
+    <label for="subject">Sujet du message : </label>
+    <select name="subject" id="subject">
+      <option value="">Choisissez...</option>
+      <option value="message">Message</option>
+      <option value="devis">Devis</option>
+      <option value="support">Demande de support</option>
+      <option value="autre">Autre...</option>
+    </select>
+    
+    <br><br>
+    <label for="subject2">Plusieurs sujets ? : </label>
+    <select multiple name="subject2" id="subject2">
+      <option value="">Choisissez...</option>
+      <option value="message">Message</option>
+      <option value="devis">Devis</option>
+      <option value="support">Demande de support</option>
+      <option value="autre">Autre...</option>
+    </select>
+
+    <p>
+      <label for="message">Votre message:</label>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="votre texte ici...">Valeur ici</textarea>
+    </p>
+
+    <p>
+      <button type="button">Ne fait rien de spécial</button>
+      <button type="reset">Réinitialiser le formulaire</button>
+      <button type="submit">Envoyer le formulaire</button>
+      <input type="submit" value="Envoyer le formulaire avec un Input">
+      <!-- <input type="image" src="" /> -->
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+      
+    
+  </form>
+
+
+</body>
+</html>

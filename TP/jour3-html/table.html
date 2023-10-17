@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TableUXC EN HTML</title>
+</head>
+<body>
+  <h1>Les tableaux en HTML</h1>
+  
+  <!-- MAJ+ALT+Flèche bas/haut : pour duppliquer une ligne en bas ou en haut -->
+
+  <!-- la plus simple expression d'un tableau -->
+  <table>
+    <tr>
+      <td>col 1</td>
+      <td>col 2</td>
+    </tr>
+  </table>
+
+  <!-- on peut y ajouter des attributs pour contrôler son aspect, mais on privilégiera toujours la CSS -->
+  <table border="1" width="200" align="center" cellpadding="10" cellspacing="10">
+    <tr>
+      <td>col 1</td>
+      <td>col 2</td>
+    </tr>
+  </table>
+
+  <!-- Un tableau complet -->
+  <table border="1" width="100%">
+    <caption>Titre du tableau</caption>
+    <thead>
+      <tr>
+        <th>Entête de colonne 1</th>
+        <th>Entête de colonne 2</th>
+        <th>Entête 3</th>
+        <th>Entête 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>col 1</th>
+        <td>col 2</td>
+        <td>col 3</td>
+        <td>col 4</td>
+      </tr>
+      <tr>
+        <th>col 1</th>
+        <td>col 2</td>
+        <td>col 3</td>
+        <td>col 4</td>
+      </tr>
+      <tr>
+        <th>col 1</th>
+        <td>col 2</td>
+        <td>col 3</td>
+        <td>col 4</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Pied 1</th>
+        <th>Pied 2</th>
+        <th>Pied 3</th>
+        <th>Pied 4</th>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <hr><!-- ligne horizontale séparatrice -->
+
+  <!-- fusion des cellules avec : colspan et rowspan -->
+  <table border="1" width="80%" align="center">
+    <tr>
+      <td colspan="3">ligne 1 col 1</td> <!-- fusion horizontalement -->
+	  <!-- on doit supprimer les 2 cellules fusionnées horizontalement -->
+      <td rowspan="3">ligne 1 col 4</td> <!-- fusion verticalement -->
+    </tr>
+    <tr>
+      <td>ligne 2 col 1</td>
+      <td>ligne 2 col 2</td>
+      <td>ligne 2 col 3</td>
+	  <!-- on doit supprimer les cellules fusionnées -->
+    </tr>
+    <tr>
+      <td>ligne 3 col 1</td>
+      <td>ligne 3 col 2</td>
+      <td>ligne 3 col 3</td>
+      <!-- on doit supprimer les cellules fusionnées -->
+    </tr>
+  </table>
+
+  <hr>
+  <!-- correction de l'exercice de calendrier -->
+  <table border="1" width="400">
+    <thead>
+      <tr>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mer</th>
+        <th>Jeu</th>
+        <th>Ven</th>
+        <th>Sam</th>
+        <th>Dim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

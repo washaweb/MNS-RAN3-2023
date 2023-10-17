@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice tableau</title>
+</head>
+<body>
+  <!-- 
+    créer un tableau avec des cellules fusionnées =
+    -----------------------------------------
+    |    1    |    2     |    3     |   4   |
+    -----------------------------------------
+    |    1    |         |     3    |    4    |
+    ----------|    2    |---------------------
+    |    1    |         |         3 et 4     |
+    -----------------------------------------
+   -->
+
+   <!-- raccourci emmet:
+    table[width="100%" border="1"]>tr*3>td*4{$} 
+    -->
+   <table width="100%" border="1">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td rowspan="2">2</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <!-- <td>2</td> fusionnée verticalement avec le rowspan -->
+      <td colspan="2">3 & 4</td>
+      <!-- <td>4</td> -> fusionnée horitontalement avec le colspan-->
+    </tr>
+   </table>
+   
+</body>
+</html>
