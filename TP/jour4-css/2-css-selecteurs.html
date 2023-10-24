@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les principaux sélecteurs en CSS</title>
+  <style>
+    /* pour les besoins du cours, je mets le code css directement ici dans la page, mais normalement il faudrait l'externaliser avec un fichier style.css */
+
+
+    /* ici on sélectionne toutes les balises div de la page */
+    div {
+      color: red;
+    }
+    /* on peut être plus spécifique dans le sélecteur, par exemple 
+    on sélectionne tous les a qui sont dans un div  */
+    div h2 {
+      color: orange;
+    }
+
+    /* On peut créer une classe pour choisir sois-même les éléments à viser */
+    .maclasse {
+      color: rgb(9, 185, 88);
+      font-size: 9px;
+    }
+
+    /* On peut aussi utiliser un identifiant pour viser un élément */
+    #monidentifiantunique p {
+      color: purple;
+    }
+
+    /* sélecteur d'attribut html, ici on vise l'input qui a l'attribut name="email" */
+    [type="email"] {
+      border: 2px solid red;
+    }
+    /*
+    [title^="cou"] -> qui commence par...
+    [title*="cou"]  -> qui contient...
+    [title$="cou"]  -> qui fini par...
+    */
+    [title="coucou"] {
+      border: 2px solid red;
+    }
+
+    /* sélectionne tout */
+    * {
+      font-size: 40px
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Les selecteurs de base</h1>
+  <h2 title="coucou">Vilain canard</h2>
+
+  <a href="#">vel provident</a>
+  
+  <input type="text" name="moninput">
+  <input type="email" name="email">
+
+  <div>
+    <h2 class="maclasse">Titre</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, <a href="#">vel provident</a> Odit voluptas quo officia pariatur, ipsa exercitationem quis eveniet illum, nostrum architecto sit vitae laboriosam cupiditate, nulla rerum non.</p>
+  </div>
+  
+  <div id="monidentifiantunique">
+    <h2>Titre</h2>
+    <p class="maclasse">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, vel provident? Odit voluptas quo officia pariatur, ipsa exercitationem quis eveniet illum, nostrum architecto sit vitae laboriosam cupiditate, nulla rerum non.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, aliquam inventore? Recusandae exercitationem ea aspernatur quod. Voluptate inventore numquam odit porro rem sequi nam reiciendis? Distinctio eveniet nisi neque culpa.</p>
+  </div>
+  
+  <div>
+    <h2>Titre</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, vel provident? Odit voluptas quo officia pariatur, ipsa exercitationem quis eveniet illum, nostrum architecto sit vitae laboriosam cupiditate, nulla rerum non.</p>
+  </div>
+
+</body>
+</html>

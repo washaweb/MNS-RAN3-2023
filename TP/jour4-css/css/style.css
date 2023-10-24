@@ -1,0 +1,6 @@
+/* 4/ intégrer une css depuis une autre css */
+@import url('exemple.css');
+
+input {
+  border: 5px solid red;
+}

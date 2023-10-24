@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma première css</title>
+  <!-- 2/ On peut utiliser une balise style qui sera globale pour la page -->
+  <style>
+    /*
+      Entre les balises styles, on écrit de la CSS, la syntaxe de base d'un sélecteur CSS est la suivante
+      selecteur {
+        propriété: valeur;
+        propriété2: valeur2;
+      }
+    */
+    /* ici tous les paragraphes héritent de ces styles */
+    p {
+      font-size: 20px; 
+      color: gray;
+    }
+  </style>
+
+  <!-- 3/ dernière est meilleure façon d'intégrer des styles, 
+    c'est de les externaliser -->
+   <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+  <!-- 1/ On peut écrire de la CSS directement sur une balise à l'aidfe de l'attribut style=""
+  cette manière d'intégrer des styles est surtout utilisées par JavaScript. -->
+  <h1 style="color: #05bcff;">Les CSS (Cascading Style Sheets)</h1>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptates nesciunt quos dolorem vero laboriosam atque est non, dolores inventore totam praesentium blanditiis deleniti, numquam perspiciatis quasi maiores. Ex, magni.</p>
+  
+  <p><a href="contact.html">Mon lien</a></p>
+  
+  <p>
+    <input type="text" id="mon-input" name="mon-input" />
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les unités en CSS</title>
+  <style>
+    body {
+      --olivine: #9eb25dff;
+    }
+    /* les valeurs de couleur */
+    .ma-couleur {
+      color: darkblue; /* on peut utliser des couleurs nommées, voir la liste ici: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color  */
+      color: #FFAAC4; /* format hexadécimal */
+      color: #000; /* format hexadécimal court (si les valeurs sont répétés (ou doublées) */
+      color: rgb(255, 255, 255); /* rgb (rouge, vert, bleu)3 valeurs de 0 à 255. */
+      color: rgba(50, 150, 200, .75); /* la même chose que rgb, mais avec une valeur a pour alpha, qui veut dire transparence, de 0 (transparent) à 1(opaque) avec des chiffres à virgule.  On peut aussi utiliser des pourcentages :
+      color: rgba(50, 150, 200, 75%);
+      */
+      color: hsl(150, 50%, 50%);
+      color: hsl(150, 100%, 20%);
+      
+      /* On peut définir et utilise des variables en CSS */
+      color: var(--olivine);
+    }
+  </style>
+</head>
+<body>
+  <h1>Les unités</h1>
+  <p class="ma-couleur">Voir les couleurs dans les styles de la page...</p>
+  <p class="mon-texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore fugiat <span>saepe asperiores quo neque non voluptatibus</span> nobis, est provident, sapiente, quidem illum labore corporis. Quibusdam impedit totam incidunt pariatur!</p>
+</body>
+</html>

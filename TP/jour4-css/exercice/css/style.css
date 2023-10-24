@@ -1,0 +1,27 @@
+/*
+## Créer une CSS
+
+- Créer un document CSS style.css dans un dossier `css/`
+- Lier ce document CSS à la page HTML
+- Dans le fichier CSS, modifier la couleur des titres h2 en rouge
+- Modifier la couleur du h1 en Bleu
+- Arrière-plan du footer en Orange.
+
+Pour vous aider, les propriétés CSS utilisés sont par exemple :
+
+```css
+  color; red;
+  backgroud: orange;
+```
+*/
+h2 {
+  color: red;
+}
+
+h1 {
+  color: navy;
+}
+
+footer {
+  background: orange;
+}
