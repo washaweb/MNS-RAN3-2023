@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Les unités en CSS</title>
   <style>
+    /* Les unités de mesures en CSS
+    
+      voir https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Values_and_units
+    */
     body {
-      --olivine: #9eb25dff;
+      /* taille par défaut du texte du document */
+      font-size: 16px;
+      /* on définit une variable avec --nomdelavariable: valeur; */
+      --primary: #e88c35;
     }
     /* les valeurs de couleur */
     .ma-couleur {
+      /* --primary: #e98e2d; */
       color: darkblue; /* on peut utliser des couleurs nommées, voir la liste ici: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color  */
       color: #FFAAC4; /* format hexadécimal */
       color: #000; /* format hexadécimal court (si les valeurs sont répétés (ou doublées) */
@@ -20,14 +28,96 @@
       color: hsl(150, 50%, 50%);
       color: hsl(150, 100%, 20%);
       
-      /* On peut définir et utilise des variables en CSS */
-      color: var(--olivine);
+      /* On peut utiliser des variables en CSS avec var(--nomdevariable) */
+      color: var(--primary);
     }
+
+    .mon-texte {
+      color: var(--primary);
+      font-size: 32px; /* pixels */
+      font-size: 2em; /* la taille proportionnellement à la taille du parent */
+      font-size: 2rem; /* la taille proportionnellement à la taille du root (body) */      
+    }
+
+    .mon-texte span {
+      font-size: 2em; /* par rapport au parent .mon-texte = 32px*2 -> 64px */
+      font-size: 2rem; /* par rapport au body = 16px*2 -> 32px */
+      font-size: 200%; /* par rapport au parent .mon-texte = 32px*200% -> 64px */
+      font-size: clamp(34px, 10vh, 60px); /* clamp permet de déterminer une valeur min, un valeur souhaitée, et une valeur max */
+    }
+
+    /* quelques CSS de base pour reconnaitre les divs */
+    /*****************************/
+    div {
+      padding: 10px;
+      background: tomato;
+      margin-bottom: 10px;
+    }
+    div div {
+      background: lightseagreen;
+      margin-bottom: 0;
+    }
+    div div div {
+      background: lightskyblue;
+    }
+    /*****************************/
+    /* ici on parle des mesures en px sur un div */
+    .px {
+      /* div rouge en pixels  = largeur fixée */
+      width: 800px;
+    }
+    /* je règles les div qui sont dans le div principal .px */
+    .px div {
+      width: 600px;
+    }
+
+    /* je règles les div qui sont dans le div qui sont dans le div principal .px */
+    .px div div {
+      width: 400px;
+    }
+
+    /* ici on parle des mesures en % sur un div */
+    .percent {
+      /* div rouge en pourcent  = largeur souple */
+      width: 80%;
+    }
+    /* ici les enfants ont une largeur relative au parent (div.px>div) => donc 50% de 80%
+    pour le div imbriqué dans le div qui est dans le div.px ( div.px>div>div ) => 50% de 50% de 80%. */
+    .percent div {
+      width: 50%;
+    }
+
+    /* ici on parle des mesures relatives au viewport (la zone d'affichage de la fenêtre) */
+    .exemple3 {
+      width: 80vw; /* viewport width */
+      height: 100vh; /* viewport height */
+    }
+    
   </style>
 </head>
 <body>
   <h1>Les unités</h1>
   <p class="ma-couleur">Voir les couleurs dans les styles de la page...</p>
   <p class="mon-texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore fugiat <span>saepe asperiores quo neque non voluptatibus</span> nobis, est provident, sapiente, quidem illum labore corporis. Quibusdam impedit totam incidunt pariatur!</p>
+
+
+  <!-- exemple de dimentionnement -->
+  <div class="px">
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ipsum facere. Laborum vero, architecto voluptatem corporis suscipit quod voluptatum quisquam deserunt ducimus ad, dolore temporibus? Sequi consequatur vel non maiores?
+      </p>
+      <div>exemple de div</div>
+    </div>
+  </div>
+
+  <div class="percent">
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ipsum facere. Laborum vero, architecto voluptatem corporis suscipit quod voluptatum quisquam deserunt ducimus ad, dolore temporibus? Sequi consequatur vel non maiores?
+      </p>
+      <div>exemple de div</div>
+    </div>
+  </div>
+  
+  <div class="exemple3"></div>
 </body>
 </html>
