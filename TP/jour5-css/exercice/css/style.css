@@ -1,0 +1,33 @@
+/* 
+Correction de kl'exercice 
+*/
+/* <h1 id="titre1"></h1> */
+#titre1 {
+  font-size: 40px;
+}
+
+/* <p class="intro"><.p> */
+.intro {
+  color: #16a6f4;
+}
+
+span.intro {
+  color: #97f171;
+}
+
+p {
+  font-size: 18px;
+}
+
+span {
+  color: red;
+}
+
+
+.menu {
+  font-size: 14px;
+}
+
+.rouge {
+  color: red;
+}

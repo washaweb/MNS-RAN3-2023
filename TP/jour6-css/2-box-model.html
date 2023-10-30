@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modèle de boite (Box Model)</title>
+  <style>
+    /* on change le mode de calcul des largeur par défaut :
+    box-sizing: content-box || border-box; */
+    * {
+      box-sizing: border-box;
+    }
+    /* css par défaut pour voir les boites */
+    .box {
+      background-color: red;
+    }
+
+    /* propriétés display, permet d'attribuer un comportement à un élément, par exemple donner le comportement d'un block à une balise span.
+    display: block;
+    display: inline;
+    display: inline-block;
+    display: flex;
+    display: inline-flex;
+    display: grid;
+    display: list-item;
+    display: none;
+     */
+    .d-block {
+      display: block;
+    }
+    .d-inline {
+      display: inline;
+    }
+    .d-none {
+      display: none;
+    }
+
+    /*
+    Le box model permet de définir la largeur, hauteur, marges extérieures (margin), marges intérieures (padding) et les bordures (border)
+     */
+    .box-model-exemple {
+      background-color: rgb(211, 157, 219);
+      width: 500px; /* min-width: 300px; max-width: 500px */
+      height: 300px;
+      /* min-height: 300px;
+      max-height: 500px; */
+      margin: 20px; /* une valeur commune pour tous les côtés */
+      margin-top: 100px; /* une valeur précise pour un côté */
+      margin-bottom: 100px;
+      margin-left: 100px;
+      margin-right: 100px;
+
+      margin: 100px 50px 40px 20px; /* haut 100px, droite 50px, bas 40px, gauche 20px; */
+      margin: 100px calc(50% - 150px) 20%;
+      /* haut: 100px gauche/droite (50% - 150px), bas 20% */
+      margin: 100px 20px;
+      /* haut/bas 100px, droite/gauche 20px */
+      margin: 20px; /* ici tout à 20px */
+
+      padding: 36px; /* padding : marges intérieures, on peut aussi utiliser tous les raccourcis comme sur margin avec 1, 2 , 3 ou 4 valeurs */
+      
+      border-width: 10px;
+      border-style: dotted; /* solid, none, dashed, dotted, groove, ridge, double */
+      border-color: blue;
+      /* en résumé : */
+      border: 4px solid red;
+      border-left: 10px dotted blue;
+      
+      border-right: 20px dashed orange;
+      border-top: 20px double pink;
+      border-bottom: 5px solid purple;
+
+      /* controle l'arrondi des angles */
+      /* border-top-left-radius: 100px;
+      border-radius: 100px; */
+      border-radius: 100px 40px 200px 0px;
+      border-radius: 100px 40px 20px;
+      border-radius: 300px;
+      border-top-left-radius: 100%;
+    }
+
+    /* en application, réalisons un menu */
+     /* par exemple pour redéfinir une liste à puces 
+    on vise toutes les li qui sont dans la classe .menu
+    */
+    .menu li {
+      display: inline-block;
+    }
+
+    .button {
+      display: block;
+      background-color: tomato;
+      color: white;
+      padding: 4px 16px;
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="d-none">Le box-model</h1>
+  <p class="box">test</p>
+
+  <!-- les div se comportent en block, ils prennent 100% de la largeur disponible dans leur parent, et chassent les éléments suivants à la ligne. -->
+  <div class="box">Voir les propriétés de styles ...</div>
+  <div class="box d-inline">Voir les propriétés de styles ...</div>
+  <div class="box d-inline">Voir les propriétés de styles ...</div>
+
+  <p>Exemple de boite dans un texte 
+    <!-- les span se comportent en inline, ça veut dire en ligne avec le texte. -->
+    <span class="box box-model-exemple">ma boite</span> <span class="box d-block ">ma boite 2</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, recusandae temporibus expedita voluptatibus.</p>
+
+    <div class="box-model-exemple">
+      un block exemple, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam inventore dolores repellendus voluptate laboriosam, incidunt fugiat soluta quibusdam natus sint suscipit est illum, optio architecto.
+    </div>
+
+    <ul class="menu">
+      <li><a class="button" href="#">list 1</a></li>
+      <li><a class="button" href="#">list 2</a></li>
+      <li><a class="button" href="#">list 3</a></li>
+    </ul>
+
+    <p>
+      <a class="button" href="#">list 1</a>
+    </p>
+</body>
+</html>
