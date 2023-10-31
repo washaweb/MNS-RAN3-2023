@@ -2,7 +2,7 @@
 
 À l'aides des `positions` et du `box-model`, utilisez uniquement des images d'arrière plan en css (`background`) et des balises `div`, pour reproduire cette mise en page illustrative.
 
-![Mise en page à reproduire](../ressources/13-exercice-float-position/exercice-train.jpg)
+![Mise en page à reproduire](../ressources/13-exercice-position/exercice-train.jpg)
 
 - Utilisez le modèle HTML fourni en exemple pour reproduire l'image, au plus fidèle possible.
 - Utilisez le background image pour intégrer les éléments de l'illustration
@@ -12,4 +12,4 @@
 - Téléchargez les éléments en pièce jointe de l'exercice pour commencer
 - **Objectif bonus:** réaliser l'intégration des animations pour les oiseaux et la fumée de cheminée du train
 
-Les élements nécessaires à la réalisation de cet exercice sont [téléchargeables ici](https://washaweb.com/ftp/exercice-train.zip)
+Les élements nécessaires à la réalisation de cet exercice sont [disponible dans le dossier Cours/ressources/13-exercice-position](../ressources/13-exercice-position/)
