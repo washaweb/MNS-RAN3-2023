@@ -9,26 +9,59 @@
       on utilise les background pour décorer un élément HTML, avec un arrière plan,
       on peut y mettre une couleur, un dégradé de couleur ou une image
     */
+    /* définir le modèle de mesure de boite */
     * {
       box-sizing: border-box;
     }
+    
     .box {
       width: 400px;
       height: 200px;
       padding: 40px;
       text-align: center;
       
-      background-color: red;
-       /* background-image: linear-gradient(to right, red, yellow); */
-      /* background-image: radial-gradient(circle, red, yellow); */
-      background-size: 50% auto; /* largeur hauteur */
-      /*background-size: cover;*/ /* cover: recouvre tout l'espace, même en rognant l'image */
-      /*background-size: contain;*/ /* contain: l'image est toujours contenue dans le div, laissant parfois apparaître la couleur de l'arrière plan */
-      background-position: 50% 50%; /* axe-h axe-v */
-      background-repeat: no-repeat; /*repeat-x, repeat-y repeat */
+      background-color: #8ccfff; /* une couleur */
+      background-image: url('img/dog.jpg'); /* une url(chemine/vers/l'image) */
+      background-position: center top; /* horizontal(left, right, cengter) vertical (top, bottom, center), ou des valeurs en px / % */
 
-      /* propriété raccourcie: color url repeat position/size */
-      background: red url('img/dog.jpg') no-repeat center center/100px auto;
+      background-size: auto 200px; /* controle la taille de l'image en arrière plan, deux axes h / v mesures en px ou % ou auto, auto calcule le ratio de l'image en fonction d'une largeur ou d'une hauteur fixée. çàd que l'image reste proportionnelle à sa taille d'origine.  */
+
+      background-size: 50% auto; /* on peut utiliser des pourcentages, c'est 50% de la largeur disponible (celle du div çàd ici 200px (400/2)) */
+
+      background-size: contain; /* contient l'image pour qu'elle soit complètement visible */
+
+      background-size: cover; /* recadre l'image pour qu'elle couvre toujours l'espace disponible dans le div qui la contient. */
+      
+      
+      background-repeat: no-repeat; /*par défaut repeat, on peut mettre no-repeat, repeat-x, repeat-y */
+    }
+
+    .box2 {
+      width: 400px;
+      height: 200px;
+      /* ici on va utiliser la propriété raccourcie background */
+      /* background: color url(image) repeat position/size */
+      background: lightpink url('img/dog.jpg') no-repeat right bottom / 60% auto;
+      background-image: url('img/dog.jpg');
+      background: red; /* attention, écrase les propriétés de background- définies précédemment */
+    }
+
+    .box3 {
+      width: 400px;
+      height: 200px;
+      background-image: linear-gradient(lightpink, tomato); /* deux couleurs suffisent */
+      background-image: linear-gradient(lightpink 40%, tomato 60%); /* on peut préciser les "tab stop" de chaque couleur, çad leur position dans le dégrader */
+      background-image: linear-gradient(45deg, lightpink 40%, tomato 60%); /* on peut aussi ajouter une direction en degrés (deg) ou avec des mots clés */
+      /* background-size: 50% 50%; */
+
+      /* background-image: linear-gradient(lightpink, tomato, purple, #13e8ba); */
+    }
+    .box4 {
+      width: 400px;
+      height: 200px;
+      background: radial-gradient(rgba(222, 250, 10, 0.52) 0%, rgba(255, 128, 240, 0.721) 100%),
+                  url('img/dog.jpg') no-repeat left top/150px auto,
+                  url('img/dog.jpg') no-repeat right bottom/150px auto;
     }
 
   </style>

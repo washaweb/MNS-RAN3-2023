@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les sélecteurs Pseudo</title>
+
+  <style>
+    /* Les Pseudo sélecteurs permettent de styler des éléments ou des états,
+     qui ne sont pas directement écrits dans le code HTML.
+    Par exemple :
+     - l'état survolé par la souris d'un lien.
+    - L'état focus d'un input, çàd que le curseur est positionné à l'intérieur du champ de formulaire. 
+    - un paragraphe lorsqu'il est vide (':empty')
+    - un paragraphe qui contient un span (:has(span))
+    - un psueudo-élément d"une balise qui se trouve avant ou après la balise
+    */
+
+
+    /* Pseudos-sélecteurs */
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: red;
+      background-color: rgba(255, 0, 0, 0.156);
+    }
+    /* l'état focus du navigateur pour les liens */
+    a:focus {
+      outline: 4px solid red;
+    }
+
+    /* état survollé */
+    a:hover {
+      /* le :hover hérite des styles du a normal, 
+      mais on redéfinit certaines propriétés */
+      color: white;
+      text-decoration: none;
+      background-color: red;
+    }
+
+    /* on peut interagir sur des élements différents, par exemple, ici lorsque je survolle le ul, la couleur du span change */
+    ul:hover span {
+      /* le :hover sélectionne l'état survollé du ul, mais applique les changements de style sur la balise span */
+      color: navy;
+    }
+
+    /* état au clic */
+    a:active {
+      color: white;
+      background-color: purple;
+    }
+    
+    /* état visité */
+    a:visited {
+      color: navy;
+    }
+
+    #formulaire button[type="submit"] {
+      background-color: red;
+      color: white;
+      border: 4px solid transparent;
+    }
+
+    #formulaire button[type="submit"]:hover, 
+    #formulaire button[type="submit"]:focus
+    {
+      background-color: pink;
+      color: white;
+      border: 4px solid black;
+    }
+
+    #formulaire input
+    {
+      border: 3px solid gray;
+      outline: none;
+    }
+    #formulaire input:hover
+    {
+      border: 3px dotted tomato;
+      outline: none;
+    }
+    #formulaire input:focus {
+      border: 3px solid tomato;
+      outline: none;
+    }
+
+
+    /* pseudo-elements */
+    .boite {
+      text-align: center;
+      padding: 20px 100px;
+      background-color: rgb(90, 230, 220);
+    }
+
+    .boite::before {
+      content: '🫠 ';
+    }
+    .boite::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 12px;
+      background-color: red;
+      margin: 0px auto;
+    }
+    
+    /* pseudo-sélecteurs */
+    .menu li:first-of-type {
+      color: red;
+    }
+    .menu li:last-of-type {
+      color: blue;
+    }
+    .menu li:nth-of-type(3) {
+      color: orange;
+    }
+    /* .menu li:nth-of-type(even) {
+      color: pink;
+    } */
+    /* .menu li:nth-of-type(odd) {
+      color: purple;
+    } */
+    .menu li:nth-of-type(3n + 5) {
+      color: darkolivegreen;
+    }
+
+    .para:first-letter {
+      color: red;
+      font-size: 40px;
+    }
+
+    .para:first-line {
+      color: purple;
+      font-size: 20px;
+    }
+
+    p:empty {
+      background-color: red;
+      height: 20px;
+    }
+
+    p:has(span) {
+      background-color: pink;
+    }
+
+    p:not(.para) {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudo élements, pseudos-sélecteurs et pseudo-classes</h1>
+
+  <h2>Pseudo-classes</h2>
+  <ul>
+    <li><a href="#formulaire">Aller <span>au formulaire</span></a></li>
+    <li><a href="https://www.orange.fr" target="_blank">Voir le site</a></li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et labore quia dicta voluptates iusto? Nesciunt reiciendis asperiores fuga a architecto voluptatum possimus, eius deserunt fugiat? Et commodi itaque quo fugit.</p>
+  <form action="" id="formulaire">
+    <input type="text" name="message">
+    <button type="submit">Valider</button>
+  </form>
+
+  <h2>Pseudos-elements</h2>
+
+  <div class="boite">Text dans le div</div>
+
+  <h2>Pseudo-sélecteurs</h2>
+  
+  <ul class="menu">
+    <li>liste 1</li>
+    <li>liste 2</li>
+    <li>liste 3</li>
+    <li>liste 4</li>
+    <li>liste 5</li>
+    <li>liste 6</li>
+    <li>liste 7</li>
+    <li>liste 8</li>
+    <li>liste 9</li>
+    <li>liste 10</li>
+  </ul>
+
+  <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quia dolores, odit autem deserunt perferendis possimus earum officiis maiores. Officiis voluptate reprehenderit eveniet exercitationem illum, aliquid beatae cum optio placeat.</p>
+  
+  <!-- exemple de pseudo-selecteurs -->
+  <h2>Pseudos-sélecteurs</h2>
+  <p></p>
+  <p>ma phrase <span>avec un span</span> exemple.</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</body>
+</html>
