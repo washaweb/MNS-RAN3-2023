@@ -1,4 +1,4 @@
-# Exercice CSS du CV
+# 08-1 Exercice CSS du CV
 
 À l'aide d'un fichier HTML et d'un fichier css externalisé (lié au document HTML).
 Concevez votre CV en HTML et stylisez le avec la CSS pour obtenir un rendu graphique qui vous convient.

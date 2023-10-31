@@ -37,7 +37,7 @@ Exemple :
 }
 ```
 
-![Schéma des axes et des éléments flex](../ressources/14-flexbox/flexbox.png)
+![Schéma des axes et des éléments flex](../Ressources/_imgs/flexbox.png)
 
 **4. La Direction des Éléments Flex :**
 
@@ -54,7 +54,7 @@ Exemple :
 
 lorsque vous changez la direction du flex, l'axe pricipal et l'axe croisé sont inversé, **l'axe principal** devient alors **vertical** et **l'axe secondaire** devient **horizontal**.
 
-![Changement de direction flex](../ressources/14-flexbox/flexbox-cros-axis.jpeg)
+![Changement de direction flex](../Ressources/_imgs/flexbox-cros-axis.jpeg)
 
 L'utilisation des alignements est alors inversé :
 

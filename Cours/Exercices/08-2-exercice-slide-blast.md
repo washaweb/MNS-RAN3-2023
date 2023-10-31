@@ -1,10 +1,10 @@
-# Exercice 13-3 : slide blast
+# 08-2 Exercice slide Blast
 
 reproduire l'image ci-jointe en code HTML:
 
-![Mise en page à reproduire](../ressources/13-exercice-slide-blast/exercice-todo.png)
+![Mise en page à reproduire](../Ressources/08-2-exercice-slide-blast/exercice-todo.png)
 
-Les images et typos sont disponibles dans le dossier [`Cours/ressources/13-exercice-slide-blast`](../ressources/13-exercice-slide-blast/) du dépôt GIT.
+Les images et typos sont disponibles dans le dossier [`Cours/Ressources/13-exercice-slide-blast`](../Ressources/08-2-exercice-slide-blast/) du dépôt GIT.
 
 Voici quelques indications de style :
 

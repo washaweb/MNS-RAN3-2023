@@ -16,7 +16,7 @@ C'est un outil très puissant pour générer des mise en pages complexes avec de
    }
    ```
 
-   ![Exemple position static](../ressources/positionnement-float/position-static.png)
+   ![Exemple position static](../Ressources/_imgs/position-static.png)
 
 2. **Position `relative`** :
 
@@ -33,7 +33,7 @@ C'est un outil très puissant pour générer des mise en pages complexes avec de
    }
    ```
   
-  ![Exemple position relative](../ressources/positionnement-float/position-relative.png)
+  ![Exemple position relative](../Ressources/_imgs/position-relative.png)
 
 3. **Position `absolute`** :
 
@@ -51,7 +51,7 @@ C'est un outil très puissant pour générer des mise en pages complexes avec de
    }
    ```
 
-   ![Exemple position absolute](../ressources/positionnement-float/position-absolute.png)
+   ![Exemple position absolute](../Ressources/_imgs/position-absolute.png)
 
 4. **Position `fixed`** :
 
@@ -68,7 +68,7 @@ C'est un outil très puissant pour générer des mise en pages complexes avec de
    }
    ```
 
-   ![Exemple position fixed](../ressources/positionnement-float/position-fixed.png)
+   ![Exemple position fixed](../Ressources/_imgs/position-fixed.png)
 
 5. **Position `sticky`** :
 
@@ -87,11 +87,11 @@ C'est un outil très puissant pour générer des mise en pages complexes avec de
 
    > [voir l'exemple de code ici](https://codepen.io/rpsthecoder/pen/zGYXEX)
 
-   ![Exemple position absolute](../ressources/positionnement-float/position-sticky-1.png)
+   ![Exemple position absolute](../Ressources/_imgs/position-sticky-1.png)
 
    En scrollant, le div reste accroché au haut de la page :
 
-   ![Exemple position absolute](../ressources/positionnement-float/position-sticky-2.png)
+   ![Exemple position absolute](../Ressources/_imgs/position-sticky-2.png)
 
 ### à retenir
 

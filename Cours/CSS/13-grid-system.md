@@ -2,7 +2,7 @@
 
 Le modèle de grille en CSS, activé avec la propriété `display: grid;`, est une technique de mise en page moderne, qui permet de créer des mises en page à deux dimensions (lignes et colonnes) de manière efficace, on parle de disposition en trame.
 
-![Grid system](../ressources/15-grid/grid.png)
+![Grid system](../Ressources/_imgs/grid.png)
 
 **1. Création d'une Grille :**
 
@@ -190,7 +190,7 @@ aside {
 }
 ```
 
-![Rendu de l'exemple](../ressources/15-grid/grid-example.png)
+![Rendu de l'exemple](../Ressources/_imgs/grid-example.png)
 
 
 > Pour aller plus loin avec le grid system

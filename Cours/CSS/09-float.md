@@ -22,7 +22,7 @@ Exemple :
 }
 ```
 
-![Exemple float left](../ressources/positionnement-float/float.png)
+![Exemple float left](../Ressources/_imgs/float.png)
 
 Dans cet exemple, une boite flottante est créée, à droite, elle occupe 200px de large. Cela permet aux texte de s'aligner côte à côte de la boite flottante.
 
@@ -42,7 +42,7 @@ La propriété `clear` est utilisée pour spécifier de quel côté un élément
 }
 ```
 
-![Exemple clear](../ressources/positionnement-float/clear.png)
+![Exemple clear](../Ressources/_imgs/clear.png)
 
 Utiliser `clear` nous permet de bouger la section sous la `div` flottante. Vous utilisez la valeur `clear: left;` pour annuler le `float: left;` de la `div`. Vous pouvez aussi utiliser `clear: right;` et `clear: both;`.
 
@@ -58,7 +58,7 @@ Exemple classique d'une classe utilitaire pour reset les float :
 }
 ```
 
-![Technique du clearfix](../ressources/positionnement-float/technique-clearfix.png)
+![Technique du clearfix](../Ressources/_imgs/technique-clearfix.png)
 
 Dans cet exemple, une classe `.clearfix` est utilisée pour nettoyer les éléments flottants à l'intérieur de son conteneur. La pseudo-classe `::after` est utilisée pour ajouter un élément vide à la fin du conteneur avec `clear: both;`, ce qui garantit que l'élément `.clearfix` ne sera pas influencé par les éléments flottants précédents.
 

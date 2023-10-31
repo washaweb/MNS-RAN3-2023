@@ -31,9 +31,15 @@ Supports de cours et travaux pratiques réalisés en cours de RAN3-2023, Metz Nu
 6. [Les background en CSS](Cours/CSS/6-proprietes-de-background.md)
 7. [Le box model](Cours/CSS/7-le-box-model.md)
 8. [Sélecteurs CSS avancés](Cours/CSS/8-selecteurs-avances.md)
-9. [Exercices CSS 1](Cours/CSS/9-exercices-css.md)
-10. [Exercices CSS 2](Cours/CSS/10-exercice-cv.md)
-11. [Float et clear](Cours/CSS/11-float.md)
-12. [Position, z-index et overflow](Cours/CSS/12-positionnement.md)
-13. [Exercices float](Cours/CSS/13-1-exercice-css-float.md)
-14. [Exercices position](Cours/CSS/13-2-exercice-css-position.md)
+9. [Float et clear](Cours/CSS/11-float.md)
+10. [Position, z-index et overflow](Cours/CSS/12-positionnement.md)
+
+### Exercices
+
+1. [07-1 Exercices CSS](Cours/Exercices/07-1-exercices-css.md)
+2. [07-2 Surcharge de classe](Cours/Exercices/07-2-surcharge-de-classe.md)
+3. [07-3 Pseudo-Elements](Cours/Exercices/07-3-exercice-pseudo-element.md)
+4. [08-1 Exercice du CV](Cours/Exercices/08-1-exercice-cv.md)
+5. [08-2 Exercice slide blast](Cours/Exercices/08-2-exercice-slide-blast.md)
+6. [09 Exercice CSS float](Cours/Exercices/09-exercice-css-float.md)
+7. [10 Exercice CSS Position](Cours/Exercices/10-exercice-css-position.md)

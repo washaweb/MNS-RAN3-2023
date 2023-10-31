@@ -1,4 +1,4 @@
-# Exercices CSS
+# 07 - Exercices CSS
 
 Vous trouverez ci-après des exercices à rendre sur le langage CSS.
 
@@ -113,20 +113,20 @@ body {
 
 Écrire le code HTML et la feuille de style CSS **pour obtenir le rendu ci-dessous**, en utilisant l'image ci-dessous.
 
-![Rendu à obtenir](../ressources/9-exercice-css/exo-7-rendu.png)
+![Rendu à obtenir](../Ressources/07-1-exercice-css/exo-7-rendu.png)
 
-- [Animation à utiliser](../ressources/9-exercice-css/exo-7-nyamcatrainbow.gif)
+- [Animation à utiliser](../Ressources/07-1-exercice-css/exo-7-nyamcatrainbow.gif)
 - Bleu : `#0f4d8f`
 
 ## Exercice 8
 
 Modifier le code HTML et la feuille de style CSS **pour obtenir le rendu ci-dessous**, en utilisant les images suivantes.
 
-![Rendu à obtenir](../ressources/9-exercice-css/exo-8.png)
+![Rendu à obtenir](../Ressources/07-1-exercice-css/exo-8.png)
 
-- [Carré noir](../ressources/9-exercice-css/exo-8-black.png)
-- [Carré blanc](../ressources/9-exercice-css/exo-8-white.png)
-- [Carré rouge](../ressources/9-exercice-css/exo-8-red.png)
+- [Carré noir](../Ressources/07-1-exercice-css/exo-8-black.png)
+- [Carré blanc](../Ressources/07-1-exercice-css/exo-8-white.png)
+- [Carré rouge](../Ressources/07-1-exercice-css/exo-8-red.png)
 
 ```html
 <body>
@@ -155,19 +155,19 @@ td {
 
 > *Astuce: aidez vous des alignements et des marges pour ajuster le placement des images.*
 
-![Rendu à obtenir](../ressources/9-exercice-css/exo-9.jpeg)
+![Rendu à obtenir](../Ressources/07-1-exercice-css/exo-9.jpeg)
 
-- [Image de background](../ressources/9-exercice-css/exo-9-bg.webp)
-- [Planet 1](../ressources/9-exercice-css/exo-9-planet-1.png)
-- [Planet 2](../ressources/9-exercice-css/exo-9-planet-2.png)
-- [Planet 3](../ressources/9-exercice-css/exo-9-planet-3.png)
+- [Image de background](../Ressources/07-1-exercice-css/exo-9-bg.webp)
+- [Planet 1](../Ressources/07-1-exercice-css/exo-9-planet-1.png)
+- [Planet 2](../Ressources/07-1-exercice-css/exo-9-planet-2.png)
+- [Planet 3](../Ressources/07-1-exercice-css/exo-9-planet-3.png)
 
 ## Exercice 10
 
 Écrire le code HTML et la feuille de style CSS **pour obtenir le rendu ci-dessous**, en utilisant l'image ci-après.
 
-![Rendu à obtenir](../ressources/9-exercice-css/exo-10.jpeg)
+![Rendu à obtenir](../Ressources/07-1-exercice-css/exo-10.jpeg)
 
-- [Vidéo](../ressources/9-exercice-css/exo-10.mp4)
+- [Vidéo](../Ressources/07-1-exercice-css/exo-10.mp4)
 - Couleur bleu : `blue`
 - Couleur grise : `grey`

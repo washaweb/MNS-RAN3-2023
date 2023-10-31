@@ -2,7 +2,7 @@
 
 D'après l'exemple suivant :
 
-![Exemple de résultat attendu](../ressources/13-exercice-float/resultat-exercice-float.png)
+![Exemple de résultat attendu](../Ressources/09-exercice-float/resultat-exercice-float.png)
 
 - réaliser un layout avec les propriétés CSS: `float`, `display`, `clear`
 - créer un header avec la balise `<header></header>`
