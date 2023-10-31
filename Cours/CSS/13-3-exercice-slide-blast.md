@@ -1,4 +1,4 @@
-# Exercice 14 : slide blast
+# Exercice 13-3 : slide blast
 
 reproduire l'image ci-jointe en code HTML:
 
