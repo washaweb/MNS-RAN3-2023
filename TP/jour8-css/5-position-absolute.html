@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Absolute</title>
+  <style>
+    .box {
+      position: relative;
+      height: 400px;
+      /* position absolute: sort l'élément du flux de la mise en page.
+      Et se position en "ABSOLUTE" par raport à son premier parent qui n'est pas en position "STATIC". */
+
+      /* ici, il n'y a pas de parent ≠ static, donc les coordonnées sont celles de la fenêtre. */
+      
+      background-color: darkgray;
+    }
+    .inside-box {
+      position: absolute;
+      height: 60px;
+      /* ici la inside-box utilise le système de coordonnée de son parent .box car celui-ci à une position ≠ static */
+      top: 50%; /* positionne le haut de la boite à 50% de la taille de son parent */
+      margin-top: -30px; /* décale en négatif la boite qui fait 40px de la moitié de sa hauteur. pour qu'elle soit centrée verticalement */
+      left: 20px;
+      width: 50%;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>titre</h2>
+  <div class="box">
+    <div class="inside-box"> boite dans la boite</div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui commodi corrupti quod blanditiis, consequatur non autem sapiente odit eius ullam laudantium nostrum asperiores consectetur neque accusantium fugiat laborum dolor.
+  </div>
+  <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum delectus commodi totam dolores architecto voluptatibus, officia doloribus ea voluptatum dolorum eum dicta consequatur nisi, perferendis repellendus accusamus quo! Repudiandae, quidem.
+  </div>
+</body>
+</html>

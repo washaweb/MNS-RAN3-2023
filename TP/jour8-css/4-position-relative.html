@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position relative</title>
+  <style>
+    .box {
+      position: relative;
+      border: 4px solid red;
+      background-color: rgba(255, 0, 0, 0.9);
+      /* définition: on déplace un élément RELATIVEMENT par rapport à sa position originale dans la page, sans le sortir du flux de la mise en page.  */
+
+
+      /* à partir du moment ou on n'utilise plus static (par défaut), on peut utiliser les propriétés suivantes en addition de la position :
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: visible;
+        z-index: 0;
+      */
+      left: 20px;
+      top: 0px;
+    }
+    .inside-box {
+      position: relative;
+      top: 10px;
+      left: -50px;
+      width: 50%;
+      border: 4px solid cyan;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="inside-box"> boite dans la boite</div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. A qui commodi corrupti quod blanditiis, consequatur non autem sapiente odit eius ullam laudantium nostrum asperiores consectetur neque accusantium fugiat laborum dolor.
+  </div>
+  <div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum delectus commodi totam dolores architecto voluptatibus, officia doloribus ea voluptatum dolorum eum dicta consequatur nisi, perferendis repellendus accusamus quo! Repudiandae, quidem.
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin auto</title>
+  <style>
+    .block {
+      width: 600px; /* il faut que le div ait une largeur plus petite que son conteneur pour que la marge s'exprime bien. */
+      margin: 0px auto; /* centrage du div avec des marges automatiques */
+      border: 4px solid red;
+    }
+    .block-souple {
+      /* avec des min/max on peut faire du responsive, çàd qui s'adapte à la largeur du document.*/
+      min-width: 400px;
+      max-width: 600px;
+      margin: 0px auto;
+      border: 4px solid orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="block">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni natus ratione sunt dolore dolorum sint eius autem. Commodi reprehenderit exercitationem repudiandae? Quibusdam pariatur debitis modi sint repellat voluptate temporibus dignissimos.</p>
+  </div>
+  <div class="block-souple">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni natus ratione sunt dolore dolorum sint eius autem. Commodi reprehenderit exercitationem repudiandae? Quibusdam pariatur debitis modi sint repellat voluptate temporibus dignissimos.</p>
+  </div>
+</body>
+</html>
