@@ -51,4 +51,5 @@ Supports de cours et travaux pratiques réalisés en cours de RAN3-2023, Metz Nu
 - [10 Exercice CSS Position](Cours/Exercices/10-exercice-train-css-position.md)
 - [11 Exercice CSS animation](Cours/Exercices/11-exercice-train-animation.md)
 - [12 Demo Transform CARD](Cours/Ressources/12-demo-transform-card)
+- [13 Exercice Flex](Cours/Exercices/13-exercice-flex.md)
 - [16 Exercice Cols Bootstrap](Cours/Exercices/16-exercice-cols-bootstrap.md)
