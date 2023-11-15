@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float et clear</title>
+  <style>
+    .float-left {
+      /* float: permet de faire "flotter" un élément. La mise en page "habille" alors ce contenu. */
+      /* l'image flottante, sort du flux naturel de la mise en page, mais son contenu chasse le texte autour. */
+      float: left;
+      margin: 0px 20px 10px 100px;
+    }
+    .float-right {
+      /* float: permet de faire "flotter" un élément. La mise en page "habille" alors ce contenu. */
+      /* l'image flottante, sort du flux naturel de la mise en page, mais son contenu chasse le texte autour. */
+      float: right;
+      margin: 0px 0px 10px 20px;
+      
+    }
+    .clear-left {
+      clear: left;
+    }
+    .clear-right {
+      clear: left;
+    }
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <h2>Float et clear</h2>
+
+  <section>
+    <img class="float-left" src="https://picsum.photos/200/300" alt="Image exemple">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae fugiat accusamus voluptatibus, quis nemo assumenda. Exercitationem molestias distinctio numquam labore possimus nisi laborum laboriosam molestiae, atque hic! Nihil, odit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae fugiat accusamus voluptatibus, quis nemo assumenda. Exercitationem molestias distinctio numquam labore possimus nisi laborum laboriosam molestiae, atque hic! Nihil, odit.</p>
+    <img class="float-right" src="https://picsum.photos/200/300" alt="Image exemple">
+    
+    <!-- clear : nettoye les flottant et réinitialise l'habillage -->
+    <div class="clear"></div>
+    <h2>Mon titre</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae fugiat accusamus voluptatibus, quis nemo assumenda. Exercitationem molestias distinctio numquam labore possimus nisi laborum laboriosam molestiae, atque hic! Nihil, odit.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae fugiat accusamus voluptatibus, quis nemo assumenda. Exercitationem molestias distinctio numquam labore possimus nisi laborum laboriosam molestiae, atque hic! Nihil, odit.</p>
+  </section>
+</body>
+</html>

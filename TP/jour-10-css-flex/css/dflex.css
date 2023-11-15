@@ -1,0 +1,75 @@
+/* 
+Display: flex; permet de disposer les enfants du conteneur qui a la propriété display: flex; en colonnes et/ou lignes
+ */
+
+.container-flex {
+  display: flex;
+  height: 100vh;
+  border: 2px solid red;
+  column-gap: 20px; /* espace entre les colonnes */
+  row-gap: 20px; /* espace entre les lignes */
+  gap: 20px 10px; /* espace entre les colonnes et les lignes */
+  gap: 20px; /* la même valeur partout */
+  flex-direction: row; /* direction du flex, row, row-reverse (defaut) => ligne, column, column-reverse => colonne */
+  justify-content: center; /* contrôle l'alignement des enfants sur l'axe principal : flex-start (default), flex-end, center, space-between, space-around, space-evenly */
+  align-items: center; /* contrôle l'alignement des enfants sur l'axe secondaire (perpendiculaire à l'axe principal) : stretch (defaut), flex-start, flex-end, center */
+}
+
+.container-flex section {
+  /* la section est un enfant du conteneur flex, c'est un flex-item qui hérite des instructions du conteneur. 
+    On peut aussi donner des instructions aux enfants du conteneur (flex-item) 
+  */
+  background-color: cyan;
+  /* width: 60%; */
+  /* order: 2; */
+  /* flex-grow: 1;
+  flex-schrink: 1;
+  flex-basis: 1; */
+  flex: 1;
+}
+
+.container-flex section:first-of-type {
+  /* ici je dis à cette section spécifique qu'elle doit s'aligner différement */
+  align-self: stretch; 
+  flex: 3;
+}
+
+.container-flex section:last-of-type {
+  /* ici je dis à cette section spécifique qu'elle doit s'aligner différement */
+  align-self: flex-end;
+  order: 1;
+}
+
+
+/* exemple avec les liens de navigation et le titre */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: tomato;
+}
+
+.main-header h1 {
+  /* neutraliser les marges par défaut du titre */
+  margin: 0;
+}
+
+/* ici on s'occupe de l'organisation horizontale du menu */
+.main-header .menu {
+  display: flex;
+  list-style-type: none;
+  /* le ul a des margers par defaut, je les neutralises */
+  margin: 0;
+  padding: 0;
+  gap: 1px;
+}
+
+
+.main-header .menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+ color: tomato;
+ background-color: #fff;
+}

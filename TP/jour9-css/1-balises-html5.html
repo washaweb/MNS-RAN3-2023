@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balises HTML 5</title>
+</head>
+<body>
+  <!-- on utilise toujours les DIV pour ajouter nos classes englobantes qui n'ont pas de sémantique particulière-->
+  <div class="container">
+    <!-- le header de la page -->
+    <header class="main-header">
+      <!-- titre global de la page -->
+      <h1>Titre de la page</h1>
+      <!-- il s'agit de la navigation principale de la page -->
+      <nav class="navbar-nav">
+        <ul class="nav" role="navigation">
+          <li>
+            <a href="#about">About</a>
+            <ul>
+              <li><a href="#about-exemple-sous-rub">Sou-rubrique exemple</a></li>
+            </ul>
+          </li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- ./nav -->
+      </nav>
+    </header>
+    <!-- ./main-header -->
+    <!-- on ne peut avoir qu'une seule balise main par document, c'est le corps principal du contenu de la page -->
+    <main role="document">
+
+      <section id="about">
+        <h2>About</h2>
+        <p>Texte de la section...</p>
+      </section>
+      <!-- ./about -->
+      
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- un ou plusieurs articles (items), qui sont des contenus identifiables de mon site internet.  -->
+        <article>
+          <!-- header de l'article -->
+          <header>
+            <!-- Titre de la référence du portfolio -->
+            <h2>Site internet de MNS</h2>
+            <p>
+              <span class="meta-author">RAN 3</span>
+              <time datetime="2023-10-20T12:00:00">20/10/2023</time>
+            </p>
+          </header>
+          <section>
+            <h3>Sous-chapitre 1 de l'article</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ea odio nulla dolorum veritatis voluptate aperiam deserunt. Provident, temporibus corporis cupiditate eligendi iure praesentium sed delectus dolor nesciunt ea animi.</p>
+            <!-- figure : une image ou un schéma qui est en relation directe avec le sujet de l'article pour en renforcer le sens ou l'explication de manière graphique -->
+            <figure>
+              <img src="https://picsum.photos/200/300" alt="Shéma exemple">
+              <figcaption>Titre du schéma ou de l'illustration</figcaption>
+            </figure>
+          </section>
+          <section>
+            <h3>Sous-chapitre 2 de l'article</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ea odio nulla dolorum veritatis voluptate aperiam deserunt. Provident, temporibus corporis cupiditate eligendi iure praesentium sed delectus dolor nesciunt ea animi.</p>
+          </section>
+          <!-- le footer de l'article -->
+          <footer>
+            <a href="read-more.html">Lire la suite</a>
+            <p>référenes : sldfklsdkfmsdf,sdflsdkflsdfk, sdfs</p>
+            <p>Sources : sldfklsdkfmsdf,sdflsdkflsdfk, sdfs</p>
+          </footer>
+        </article>
+        <!-- aside : un ou des contenus secondaires, en relation avec le contenu principal de l'article, exemple, des widgets dans wordpress qui permettent d'afficher les articles en relation -->
+        <aside>
+          <h3>Titre de l'aside</h3>
+          <p>Contenu de l'aside</p>
+        </aside>
+      </section>
+      <!-- ./portfolio -->
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="contact.php" method="POST">
+          <p>
+            <label for="email">Votre email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email..." required>
+          </p>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+      <!-- ./contact -->
+    </main>
+
+    <!-- footer principal -->
+    <footer class="main-footer">
+      <ul class="footer-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="cgv.html">CGV</a></li>
+      </ul>
+      <p>
+        &copy; 2023/24 MNS
+      </p>
+    </footer>
+  </div>
+
+
+</body>
+</html>

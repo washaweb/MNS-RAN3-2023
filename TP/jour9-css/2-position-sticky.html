@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Sticky</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+    }
+    .article {
+      background-color: #a1e2e2;
+      padding: 20px;
+      display: flex;
+      align-items: stretch;
+      gap: 20px;
+    }
+    .article article {
+      flex: 1;
+      background-color: #eab5b5;
+    }
+    /* deux conditions pour qu'un sticky fonctionne : 
+    - le paremt doit être en position ≠ de static
+    -  il doit être plus grand que le contenu de son enfant sticky pour qu'il ait la place de bouger. */
+    .sticky-container {
+      width: 25%;
+      background-color: greenyellow;
+      /* Cet élément est en position relative, pour devenir le référent de positionnement de ses enfants, 
+      çad que le 0,0 des axes top, left de ses enfants seront définis par rapport à cet élément 
+      et non plus par rapport à la fenêtre.
+        */
+      position: relative;
+      /* la hauteur de cet élément doit être plus importante que le contenu sticky qui "circule" dans son parent. */
+    }
+
+    /* l'élément en sticky va alterner sa position entre le top de sont parent (absolute), 
+    et le haut de la fenêtre (fixed) lorsque le haut de son parent dépasse le haut de la fenêtre (en négatif donc).
+    Il pourra donc resté "collé" à sa position jusqu'à atteindre le bas de son parent. */
+    .sticky-container .sticky {
+      position: sticky;
+      top: 0;
+      padding: 20px;
+      background-color: red;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Position Sticky</h1>
+  <main>
+    <section class="article">
+      <article>
+        <h2>Titre exemple</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+      </article>
+      <aside class="sticky-container">
+        <div class="sticky">
+          <h3>Sticky me !</h3>
+          <p>Exemple de contenu en sticky</p>
+        </div>
+      </aside>
+    </section>
+    <section class="article">
+      <article>
+        <h2>Titre exemple</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolores cumque illo eos eveniet ullam quam pariatur aliquid excepturi corrupti libero maiores saepe fuga animi ducimus, necessitatibus suscipit temporibus voluptas.</p>
+      </article>
+      <aside class="sticky-container">
+        <div class="sticky">
+          <h3>Sticky me !</h3>
+          <p>Exemple de contenu en sticky</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

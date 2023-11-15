@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z-index</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* on définit nos boites */
+    .box, .box-2 {
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+    }
+    /* la boite 2 est d'une couleur différente, et décallée par rapport à sa position */
+    .box-2 {
+      top: 20px;
+      left: 100px;
+      background-color: orange;
+    }
+    
+    /* on définit les couleurs des div parents */
+    .parent-1, .parent-2, .parent-3 {
+      background-color: rgba(0, 128, 0, 0.643);
+      height: 300px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    /* on joue avec les position z-index : */
+    .parent-1 {
+      z-index: 2;
+    }
+
+    .parent-2 {
+      top: -100px;
+      z-index: 1; /* ici le parent 2 est en dessous du parent 1 */
+    }
+
+    .parent-3 {
+      top: -200px;
+      /* ici le parent 3 n'a pas de z-index, ses enfants se positionneront donc en référence à la fenêtre pour le z-index */
+    }
+
+    .box {
+      /* toutes les boites .box sur le z-index 4 */
+      z-index: 4;
+      /* mais dans le cas du .parent-1 et du .parent-2, les .box héritent du z-index du parent et se positionnent donc dans l'espace z-index de celui-ci */
+      /* dans le cas du .parent-3, celui-ci n'a pas de z-index, la .box qui se trouve dans le .parent-3, hérite donc de la fenêtre pour son z-index, et se positionne au dessus des .parent-1 et .parent-2  */
+    }
+    /* toutes les boites .box-2 sur le z-index 2 */
+    .box-2 {
+      z-index: 1;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>Z-index</h1>
+  
+  <div class="parent-1">
+    <div class="box">
+      test de boite
+    </div>
+    <div class="box-2">
+      test de boite
+    </div>
+    exemple de texte sous la boite Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iure? Mollitia commodi maxime distinctio esse eaque, cupiditate quod libero expedita inventore, omnis rem ad veritatis nam adipisci temporibus dolores beatae?
+  </div>
+  
+  <div class="parent-2">
+    <div class="box">
+      test de boite
+    </div>
+    <div class="box-2">
+      test de boite
+    </div>
+    exemple de texte sous la boite Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iure? Mollitia commodi maxime distinctio esse eaque, cupiditate quod libero expedita inventore, omnis rem ad veritatis nam adipisci temporibus dolores beatae?
+  </div>
+  
+  <div class="parent-3">
+    <div class="box">
+      test de boite
+    </div>
+    <div class="box-2">
+      test de boite
+    </div>
+    exemple de texte sous la boite Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, iure? Mollitia commodi maxime distinctio esse eaque, cupiditate quod libero expedita inventore, omnis rem ad veritatis nam adipisci temporibus dolores beatae?
+  </div>
+
+</body>
+</html>
