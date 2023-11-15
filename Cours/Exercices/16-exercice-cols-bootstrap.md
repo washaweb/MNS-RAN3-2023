@@ -12,3 +12,7 @@
   - Sur Tablette, modifer les espaces et les largeurs des sous-colonnes
 
 Les élements nécessaires à la réalisation de cet exercice sont disponibles dans le dossier [Ressources/16-exercice-colonnes-bootstrap](../Ressources/16-exercice-colonnes-bootstrap/)
+
+Voici le résultat attendu (agrandir l'image pour bien tenir compte des noms des colonnes) :
+
+![Résultat attendu](../Ressources/16-exercice-colonnes-bootstrap/preview-exercice-cols-bootstrap.png)
