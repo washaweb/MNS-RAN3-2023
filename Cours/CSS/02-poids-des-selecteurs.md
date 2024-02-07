@@ -46,7 +46,7 @@ p.ma-classe {
 }
 ```
 
-Si un élément `<p>` a la classe `ma-classe` et l'id `mon-id`, la couleur du texte sera verte car la spécificité de la règle 3 est la plus élevée.
+Si un élément `<p>` a la classe `ma-classe` et l'id `mon-id`, la couleur du texte sera bleue car la spécificité de la règle 2 est la plus élevée (id => 100).
 
 ## Principe de la Cascade de Styles (Cascade)
 
